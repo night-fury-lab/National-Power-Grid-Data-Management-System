@@ -1,0 +1,121 @@
+.analytics-page {
+  /* Allow the page container to be very wide on large screens while
+     remaining responsive on smaller viewports. */
+  max-width: 2000px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+}
+
+.analytics-page h1 {
+  font-size: 2rem;
+  color: #1e293b;
+  margin-bottom: 2rem;
+}
+
+.analytics-grid {
+  /* Fixed-column grid: always show exactly 3 columns on large screens.
+     Use responsive breakpoints to go to 2 or 1 column on smaller screens. */
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 1rem;
+  padding-bottom: 0.5rem;
+  align-items: start;
+}
+
+.region-card {
+  background: #ffffff;
+  padding: 1.5rem 1.75rem;
+  border-radius: 12px;
+  border-left: 6px solid #3b82f6;
+  min-width: 220px; /* reduced so more cards fit */
+  box-sizing: border-box;
+  /* visual polish */
+  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.06);
+  transition: transform 160ms ease, box-shadow 160ms ease;
+}
+
+.region-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.12);
+}
+
+.region-card h3 {
+  font-size: 1.15rem;
+  color: #0f172a;
+  margin-bottom: 0.85rem;
+  font-weight: 700;
+}
+
+.region-card p {
+  margin: 0.45rem 0;
+  color: #475569;
+  font-size: 0.95rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+/* If there are more than 3 cards and extremely wide layout is desired,
+   the cards will remain on a single row until min-width forces wrapping. */
+
+@media (max-width: 1200px) {
+  .analytics-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 700px) {
+  .analytics-grid {
+    grid-template-columns: 1fr;
+  }
+  .analytics-page {
+    padding: 1rem;
+  }
+}
+
+.region-card h3 {
+  font-size: 1.25rem;
+  color: #1e293b;
+  margin-bottom: 1rem;
+}
+
+.region-card p {
+  margin: 0.45rem 0;
+  color: #64748b;
+  font-size: 0.95rem;
+
+}
+
+
+.region-card .label {
+  color: #64748b;
+  flex: 0 0 auto;
+  font-weight: 600;
+}
+
+.region-card .value {
+  color: #0f172a;
+  text-align: right;
+  flex: 1 1 auto;
+  white-space: nowrap; /* keep number and unit together */
+}
+.region-card .status {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  font-weight: 600;
+  margin-top: 0.5rem;
+}
+
+.region-card .status.surplus {
+  background: #d1fae5;
+  color: #065f46;
+}
+
+.region-card .status.deficit {
+  background: #fee2e2;
+  color: #991b1b;
+}

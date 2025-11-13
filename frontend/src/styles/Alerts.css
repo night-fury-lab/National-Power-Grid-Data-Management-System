@@ -1,0 +1,35 @@
+.alerts-page {
+  max-width: 1400px;
+}
+
+.alerts-page h1 {
+  font-size: 2rem;
+  color: #1e293b;
+  margin-bottom: 2rem;
+}
+
+.alerts-summary {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.alert-count {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin-top: 0.5rem;
+}
+
+.alert-count.critical {
+  color: #dc2626;
+}
+
+.alert-count.warning {
+  color: #f59e0b;
+}
+
+.alerts-list {
+  margin-top: 1rem;
+}

@@ -1,0 +1,122 @@
+/* Admin page specific styles */
+
+.analytics-page {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Top selector */
+.analytics-page > div:first-of-type {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 1rem;
+}
+
+.analytics-page label {
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.admin-select {
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  background: #fff;
+  color: var(--text-primary);
+  box-shadow: none;
+  outline: none;
+}
+
+/* Controls area */
+.admin-controls {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  margin-top: 8px;
+}
+
+.admin-controls input[type="date"],
+.admin-controls input[type="number"] {
+  padding: 8px 10px;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  background: #fff;
+  color: var(--text-primary);
+}
+
+.admin-controls button,
+.result-actions button {
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: none;
+  background: var(--primary-color);
+  color: #fff;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.15s ease, transform 0.06s ease;
+}
+
+.admin-controls button[disabled],
+.result-actions button[disabled] {
+  background: #c7d2fe;
+  cursor: not-allowed;
+}
+
+.admin-controls button:hover:not([disabled]) {
+  background: #2563eb;
+  transform: translateY(-1px);
+}
+
+/* Result panel tweaks */
+.card {
+  background: linear-gradient(180deg, #ffffff 0%, #fbfdff 100%);
+}
+
+.result-panel-meta {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.result-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.result-actions button {
+  background: #eef2ff;
+  color: #3730a3;
+  padding: 6px 10px;
+  border-radius: 8px;
+  border: 1px solid rgba(99,102,241,0.12);
+  font-weight: 600;
+}
+
+.result-actions button:hover:not([disabled]) {
+  background: #e0e7ff;
+}
+
+.card pre {
+  background: #0f172a;
+  color: #f8fafc;
+  padding: 12px;
+  border-radius: 8px;
+  overflow: auto;
+}
+
+/* Make tables and cards more compact on narrow screens */
+@media (max-width: 768px) {
+  .analytics-page {
+    padding: 0 12px;
+  }
+
+  .admin-controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .result-actions {
+    justify-content: flex-end;
+  }
+}

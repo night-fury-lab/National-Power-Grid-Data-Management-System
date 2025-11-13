@@ -1,0 +1,7 @@
+# Ignore local environment file containing secrets
+.env
+
+# Python artifacts
+__pycache__/
+.venv/
+*.pyc

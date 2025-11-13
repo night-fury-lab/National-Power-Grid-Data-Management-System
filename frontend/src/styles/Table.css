@@ -1,0 +1,82 @@
+.table-container {
+  overflow-x: auto;
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+.data-table thead {
+  background-color: #f8fafc;
+}
+
+.data-table th {
+  padding: 1rem;
+  text-align: left;
+  font-weight: 600;
+  color: #64748b;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-bottom: 2px solid #e2e8f0;
+}
+
+.data-table td {
+  padding: 1rem;
+  border-bottom: 1px solid #e2e8f0;
+  color: #1e293b;
+}
+
+.data-table tr.clickable {
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.data-table tr.clickable:hover {
+  background-color: #f8fafc;
+}
+
+.status-badge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.status-badge.active {
+  background: #d1fae5;
+  color: #065f46;
+}
+
+.status-badge.under {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.status-badge.surplus {
+  background: #d1fae5;
+  color: #065f46;
+}
+
+.status-badge.deficit {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.status-badge.critical {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.status-badge.warning {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.status-badge.adequate {
+  background: #d1fae5;
+  color: #065f46;
+}

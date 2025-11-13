@@ -1,0 +1,44 @@
+.map-placeholder {
+  padding: 2rem;
+  text-align: center;
+  background: #f8fafc;
+  border-radius: 8px;
+  border: 2px dashed #cbd5e1;
+}
+
+.map-placeholder h3 {
+  color: #1e293b;
+  margin-bottom: 0.5rem;
+}
+
+.map-placeholder p {
+  color: #64748b;
+  margin-bottom: 2rem;
+}
+
+.map-data-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.map-data-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.75rem;
+  background: white;
+  border-radius: 6px;
+  border: 1px solid #e2e8f0;
+}
+
+.state-name {
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.state-value {
+  color: #3b82f6;
+  font-weight: 500;
+}

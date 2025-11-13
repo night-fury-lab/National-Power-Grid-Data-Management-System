@@ -1,0 +1,135 @@
+.plant-details-page {
+  max-width: 1400px;
+}
+
+.plant-details-page h1 {
+  font-size: 2rem;
+  color: #1e293b;
+  margin-bottom: 2rem;
+}
+
+.page-header {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.date-selector {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.date-selector label {
+  font-weight: 600;
+  color: #64748b;
+  font-size: 0.9rem;
+}
+
+.date-picker-select {
+  padding: 8px 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  background-color: #ffffff;
+  color: #1e293b;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.date-picker-select:hover {
+  border-color: #3b82f6;
+}
+
+.date-picker-select:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.info-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.info-item:last-child {
+  border-bottom: none;
+}
+
+.info-item .label {
+  font-weight: 600;
+  color: #64748b;
+}
+
+.info-item .value {
+  color: #1e293b;
+  font-weight: 500;
+}
+
+/* Status badge styling */
+.status-badge {
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.status-badge.active {
+  background-color: #d1fae5;
+  color: #065f46;
+}
+
+.status-badge.under-outage {
+  background-color: #fee2e2;
+  color: #991b1b;
+}
+
+.status-badge.unknown {
+  background-color: #f3f4f6;
+  color: #6b7280;
+}
+
+/* Back-to-Plants button styling (kept minimal and scoped) */
+.plant-details-page .back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  background-color: #ffffff;
+  color: #0b1220;
+  border: 1px solid #dbeafe; /* soft blue border */
+  border-radius: 8px;
+  font-weight: 600;
+  box-shadow: 0 1px 2px rgba(2,6,23,0.06);
+  cursor: pointer;
+  transition: transform 120ms ease, box-shadow 120ms ease, background-color 120ms ease;
+  text-decoration: none;
+}
+
+.plant-details-page .back-btn:hover {
+  background-color: #f0f9ff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(2,6,23,0.08);
+}
+
+.plant-details-page .back-btn:active {
+  transform: translateY(0);
+}
+
+.plant-details-page .back-btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(59,130,246,0.15);
+}
