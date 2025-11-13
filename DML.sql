@@ -12,9 +12,9 @@ BEGIN
         -- (MW * 24 hours) / 1000 MWh/MU
         SET NEW.Demand_MU = NEW.Demand_MU * 0.024;
         
-        -- IF NEW.Demand_MU > 100 THEN
-        --    SET NEW.Demand_MU = NEW.Demand_MU - 15;
-        -- END IF;
+        IF NEW.Demand_MU > 100 THEN
+            SET NEW.Demand_MU = NEW.Demand_MU - 15;
+        END IF;
         
     END IF;
 END$$
